@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<title></title>
+</head>
+<body>
+	<h1>Please Enter Your Details For Our Dating Website!</h1>
+	<form>
+		<fieldset class="fieldset-one">
+			<legend>Your Face</legend>
+			<label class="labels" for="fileUpload">Your image: </label>
+			<input class="components" type="file" id="fileUpload">
+			<br>
+			<label class="labels" for="uploadedImage">Image preview: </label>
+			<img src="" id="uploadedImage">
+		</fieldset>
+		<fieldset class="fieldset-one">
+			<legend>Your General Details</legend>
+			<label class="labels">Name: </label>
+			<input class="components" type="text" placeholder="Your full name">
+			<br>
+			<label class="labels">Gender: </label>
+			<input class="components" type="radio" id="male">
+			<label for="male">Male</label>
+			<input class="components" type="radio" id="female">
+			<label for="male">Female</label>
+			<br>
+			<label class="labels">Age: </label>
+			<input class="components" id="age" type="text" value="18">
+			<br>
+			<label class="labels">Date of birth: </label>
+			<input class="components" type="date">
+			<br>
+			<label class="labels vert">Favorite color: </label>
+			<input class="components" type="color">
+			<br>
+			<label class="labels">Which country: </label>
+			<select class="components" id="dropdown"></select>
+		</fieldset>
+		<fieldset class="fieldset-one">
+			<legend>Your Indicators</legend>
+			<label class="labels">Height: </label>
+			<p class="sliderLabelsLow"><label for="height">Short</label></p>
+			<input class="components slider" type="range" id="height">
+			<p class="sliderLabelsHigh"><label for="height">Tall</label></p>
+			<br>
+			<label class="labels">Salary: </label>
+			<p class="sliderLabelsLow"><label for="height">Poor</label></p>
+			<input class="components slider" type="range" id="salary">
+			<p class="sliderLabelsHigh"><label for="height">Rich</label></p>
+		</fieldset>
+		<fieldset class="fieldset-one">
+			<legend>Your Contact Information</legend>
+			<label class="labels">Email: </label>
+			<input class="components" type="text">
+			<br>
+			<label class="labels">Mobile: </label>
+			<input class="components" type="text">
+			<br>
+			<label class="labels vert" for="textArea">Address: </label>
+			<textarea rows="4" cols="50" id="textArea"></textarea>
+			<br>
+			<label class="labels">Method to contact you: </label>
+			<input class="components" type="checkbox" id="email">
+			<label for="email">Email</label>
+			<input class="components" type="checkbox" id="whatsapp">
+			<label for="whatsapp">Whatsapp</label>
+			<input class="components" type="checkbox" id="inAppChat">
+			<label for="inAppChat">In-app chat</label>
+		</fieldset>
+		<input type="submit" value="Submit!">
+	</form>
+</body>
+</html>

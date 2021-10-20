@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Evangelism</title>
+	<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+      <script>
+        function handleCredentialResponse(response) {
+          console.log("Encoded JWT ID token: " + response.credential);
+        }
+        window.onload = function () {
+          google.accounts.id.initialize({
+            client_id: "566198336794-gmlugrcomkgurgmcvsr9urpco050e996.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+          });
+          google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            { theme: "outline", size: "large" }  // customization attributes
+          );
+          google.accounts.id.prompt(); // also display the One Tap dialog
+        }
+        function handleCredentialResponse(response) {
+		     // decodeJwtResponse() is a custom function defined by you
+		     // to decode the credential response.
+		     const responsePayload = decodeJwtResponse(response.credential);
+
+		     console.log("ID: " + responsePayload.sub);
+		     console.log('Full Name: ' + responsePayload.name);
+		     console.log('Given Name: ' + responsePayload.given_name);
+		     console.log('Family Name: ' + responsePayload.family_name);
+		     console.log("Image URL: " + responsePayload.picture);
+		     console.log("Email: " + responsePayload.email);
+		  }
+    </script>
+    <div id="buttonDiv"></div>
+    </div>
+</body>
+</html>
